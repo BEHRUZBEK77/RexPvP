@@ -1,0 +1,14 @@
+[Unit]
+Description=RexPvP Telegram Welcome/Bye Bot
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/rexpvp_bot
+ExecStart=/home/ubuntu/rexpvp_bot/venv/bin/python /home/ubuntu/rexpvp_bot/bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
