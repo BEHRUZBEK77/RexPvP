@@ -35,6 +35,7 @@ import sqlite3
 from pathlib import Path
 
 from aiogram import Bot, Dispatcher, F
+from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ChatMemberStatus, ParseMode
 from aiogram.filters import Command, CommandObject
 from aiogram.types import (
@@ -63,7 +64,7 @@ DB_PATH = Path(__file__).parent / "rexpvp_bot.db"
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger("rexpvp_bot")
 
-bot = Bot(token=BOT_TOKEN, parse_mode=ParseMode.HTML)
+bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher()
 
 # ------------------------- SmallCaps yordamchisi -------------------------
